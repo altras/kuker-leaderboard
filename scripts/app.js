@@ -24,7 +24,7 @@ var KukerLeaderboard = React.createClass({displayName: 'KukerLeaderboard',
     var self = this;
     $.ajax({
       dataType: "json",
-      url: "../json/mock.json",
+      url: "./json/mock.json",
       success: function(data) {
         self.setState(data);
       },
@@ -38,7 +38,7 @@ var KukerLeaderboard = React.createClass({displayName: 'KukerLeaderboard',
     this.setInterval(function() {
       $.ajax({
         dataType: "json",
-        url: "../json/mock.json",
+        url: "./json/mock.json",
         success: function(data) {
           self.setState(data);
         },
@@ -62,7 +62,7 @@ var KukerLeaderboard = React.createClass({displayName: 'KukerLeaderboard',
             ), 
             React.createElement("tbody", null, 
               React.createElement("tr", {className: "warning"}, 
-                React.createElement("td", null, React.createElement("img", {className: "podium", src: "/images/icon.png"})), 
+                React.createElement("td", null, React.createElement("img", {className: "podium", src: "./images/icon.png"})), 
                 React.createElement("td", null, this.state.teams[0].teamName), 
                 React.createElement("td", null, this.state.teams[0].points)
               ), 
