@@ -24,7 +24,7 @@ var KukerLeaderboard = React.createClass({displayName: 'KukerLeaderboard',
     var self = this;
     $.ajax({
       dataType: "json",
-      url: "./json/mock.json",
+      url: "../json/mock.json",
       success: function(data) {
         self.setState(data);
       },
@@ -38,7 +38,7 @@ var KukerLeaderboard = React.createClass({displayName: 'KukerLeaderboard',
     this.setInterval(function() {
       $.ajax({
         dataType: "json",
-        url: "./json/mock.json",
+        url: "../json/mock.json",
         success: function(data) {
           self.setState(data);
         },
